@@ -16,17 +16,18 @@ In my case, I have 5 possible directions to evaluate. Theese are:
 
 `I assumed left side is positive vector and right side is negative vector.`
 So according to these assumptions, I created a matrix like below:
+```python
+self.directions = np.zeros((5,5))
+for i in range(5):
+    self.directions[i, i] = 1
 
-    self.directions = np.zeros((5,5))
-    for i in range(5):
-        self.directions[i, i] = 1
-
-    """
-        [
-            [1, 0, 0, 0, 0],
-            [0, 1, 0, 0, 0],
-            [0, 0, 1, 0, 0],
-            [0, 0, 0, 1, 0],
-            [0, 0, 0, 0, 1]
-        ]
-    """
+"""
+    [
+        [1, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0],
+        [0, 0, 1, 0, 0],
+        [0, 0, 0, 1, 0],
+        [0, 0, 0, 0, 1]
+    ]
+"""
+```
